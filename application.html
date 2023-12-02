@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GateSentry | Dashboard</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar Section -->
+      <aside>
+        <div class="toggle">
+          <div class="logo">
+            <img src="images/star.png" />
+            <h2>Gate<span class="primary">Sentry</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="index.html" >
+            <span class="material-icons-sharp"> space_dashboard </span>
+            <h3>Dashboard</h3>
+            <span class="message-count">01</span>
+          </a>
+          <a href="product.html">
+            <span class="material-icons-sharp">qr_code_scanner</span>
+            <h3>Product</h3>
+          </a>
+          <a href="policies.html">
+            <span class="material-icons-sharp"> policy </span>
+            <h3>Policies</h3>
+          </a>
+          <a href="procedure.html" >
+            <span class="material-icons-sharp"> article </span>
+            <h3>Procedures</h3>
+          </a>
+          <a href="application.html" class="active">
+            <span class="material-icons-sharp"> insert_drive_file </span>
+            <h3>Application</h3>
+          </a>
+          <a href="https://pm.link/org-qk5u9cx2bmipt9FUrghwjpPV/test/wXMYQL8">
+            <span class="material-icons-sharp"> payments </span>
+            <h3>Payment</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+      <!-- End of Sidebar Section -->
+
+      <!-- Main Content -->
+      <main>
+        <h1>Application Form</h1>
+     
+        <!-- New qrInfos Section -->
+        <div class="qr-container">
+          <div class="qr-list">
+            <form id="registrationForm" class="form-section" action="process_registration.php" method="POST"
+          enctype="multipart/form-data">
+          <h2>User Information</h2>
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required>
+          <br>
+
+          <label for="studentNumber">Student Number:</label>
+          <input type="text" id="studentNumber" name="studentNumber" required>
+          <br>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+
+          <label for="contactNumber">Contact Number:</label>
+          <input type="tel" id="contactNumber" name="contactNumber" required>
+          <br>
+
+          <h2>Vehicle Information</h2>
+          <label for="vehicleRegistrationNumber">Vehicle Registration Number:</label>
+          <input type="text" id="vehicleRegistrationNumber" name="vehicleRegistrationNumber" required>
+          <br>
+
+          <label for="vehicleModel">Vehicle Model:</label>
+          <input type="text" id="vehicleModel" name="vehicleModel" required>
+          <br>
+
+          <label for="vehicleColor">Vehicle Color:</label>
+          <input type="text" id="vehicleColor" name="vehicleColor" required>
+          <br>
+
+          <h2>Upload Required Documents</h2>
+          <div class="document-requirements">
+            <p>Please upload the required documents:</p>
+            <ul>
+              <li>Please examine the
+
+                 <!-- Popup required document message -->
+                 <a href="#" class="popup-link">Policies</a>
+                 <div id="popup" class="popup-overlay">
+                   <div class="popup-content">
+                     <h3>Required Documents</h3>
+                     <p>Kindly provide the necessary documents according to your class or current status.</p>
+                     <ol id="policy" type="a">
+                       <li>Valid OR and CR of the Vehicle;</li>
+                       <li>Certificate of Registration (Enrollment for AY 2022-2023);</li>
+                       <li>Certification from matron if applicant is a dorm occupant;</li>
+                       <li>Certification from MRO Head if applicant is a concessionaire or supplier of the
+                         concessionaire;</li>
+                       <li>Certification from the Office Head, who is served for Third-Party providers;</li>
+                       <li>For SHS students who will be driving their own vehicles shall secure an endorsement/approval
+                         slip from the Prefect Office;</li>
+                       <li>For those using company vehicle, submit certification from the company that the vehicle is
+                         assigned to the user:</li>
+                     </ol>
+                     <button id="closePopup">Close</button>
+                   </div>
+                 </div>
+
+                section in status to familiarize yourself with the necessary documentation.
+              </li>
+            </ul>
+            <input type="file" id="documentUpload" name="documentUpload" multiple required><br>
+          </div>
+
+          <label>
+            <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required>
+            I agree to the terms and conditions
+          </label><br>
+          <input type="submit" id="submitBtn" value="Submit">
+        </form>
+
+            
+          </div>
+        </div>
+        <!-- End of New qrInfos Section -->
+        
+      </main>
+      <!-- End of Main Content -->
+
+      <!-- Right Section -->
+      <div class="right-section">
+        <div class="nav">
+          <button id="menu-btn">
+            <span class="material-icons-sharp"> menu </span>
+          </button>
+
+          <div class="profile">
+            <div class="info">
+              <p>Welcome, <b>Uydiangco, Benedict Eric</b></p>
+              <small class="text-muted">Student</small>
+            </div>
+          </div>
+        </div>
+        <!-- End of Nav -->
+
+        <div class="reminders">
+          <div class="header">
+            <h2>Reminders</h2>
+          </div>
+
+          <div class="notification">
+            <div class="icon">
+              <span class="material-icons-sharp"> priority_high </span>
+            </div>
+            <div class="content">
+              <div class="info">
+                <h3>Violation Vehicle #1</h3>
+                <small class="text_muted"> 10/12/23 | Expired Gate Pass </small>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script> 
+    document.querySelector('.popup-link').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('popup').style.display = 'block';
+    });
+
+    document.getElementById('closePopup').addEventListener('click', function () {
+      document.getElementById('popup').style.display = 'none';
+    });
+</script>
+    <script src="status.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

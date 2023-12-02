@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GateSentry | Dashboard</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar Section -->
+      <aside>
+        <div class="toggle">
+          <div class="logo">
+            <img src="images/star.png" />
+            <h2>Gate<span class="primary">Sentry</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="index.html" >
+            <span class="material-icons-sharp"> space_dashboard </span>
+            <h3>Dashboard</h3>
+            <span class="message-count">01</span>
+          </a>
+          <a href="product.html">
+            <span class="material-icons-sharp">qr_code_scanner</span>
+            <h3>Product</h3>
+          </a>
+          <a href="policies.html">
+            <span class="material-icons-sharp"> policy </span>
+            <h3>Policies</h3>
+          </a>
+          <a href="procedure.html" >
+            <span class="material-icons-sharp"> article </span>
+            <h3>Procedures</h3>
+          </a>
+          <a href="application.html" class="active">
+            <span class="material-icons-sharp"> insert_drive_file </span>
+            <h3>Application</h3>
+          </a>
+          <a href="https://pm.link/org-qk5u9cx2bmipt9FUrghwjpPV/test/wXMYQL8">
+            <span class="material-icons-sharp"> payments </span>
+            <h3>Payment</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+      <!-- End of Sidebar Section -->
+
+      <!-- Main Content -->
+      <main>
+        <h1>Application Form</h1>
+     
+        <!-- New qrInfos Section -->
+        <div class="qr-container">
+          <div class="qr-list">
+            
+
+            
+          </div>
+        </div>
+        <!-- End of New qrInfos Section -->
+        
+      </main>
+      <!-- End of Main Content -->
+
+      <!-- Right Section -->
+      <div class="right-section">
+        <div class="nav">
+          <button id="menu-btn">
+            <span class="material-icons-sharp"> menu </span>
+          </button>
+
+          <div class="profile">
+            <div class="info">
+              <p>Welcome, <b>Uydiangco, Benedict Eric</b></p>
+              <small class="text-muted">Student</small>
+            </div>
+          </div>
+        </div>
+        <!-- End of Nav -->
+
+        <div class="reminders">
+          <div class="header">
+            <h2>Reminders</h2>
+          </div>
+
+          <div class="notification">
+            <div class="icon">
+              <span class="material-icons-sharp"> priority_high </span>
+            </div>
+            <div class="content">
+              <div class="info">
+                <h3>Violation Vehicle #1</h3>
+                <small class="text_muted"> 10/12/23 | Expired Gate Pass </small>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script> 
+    document.querySelector('.popup-link').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('popup').style.display = 'block';
+    });
+
+    document.getElementById('closePopup').addEventListener('click', function () {
+      document.getElementById('popup').style.display = 'none';
+    });
+</script>
+    <script src="status.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
